@@ -426,62 +426,63 @@ if (hasMissingId) {
 
 interface Thrall {
   tier: number
-  speedMultiplier: number
-  costMulitplier: number
+  speed: number
+  cost: number
 }
 
-// FIXME: The speed multipliers are wrong here.
 const thrallMap: {[craftStation in CraftStation]?: Thrall[]} = {
   cauldron: [
-    {tier: 1, speedMultiplier: 1.50, costMulitplier: 1.00},
-    {tier: 2, speedMultiplier: 2.00, costMulitplier: 0.75},
-    {tier: 3, speedMultiplier: 2.50, costMulitplier: 0.75},
-    {tier: 4, speedMultiplier: 3.00, costMulitplier: 0.50},
-    {tier: 5, speedMultiplier: 3.00, costMulitplier: 0.50},
+    {tier: 1, speed: 0.50, cost: 0.00},
+    {tier: 2, speed: 1.00, cost: 0.25},
+    {tier: 3, speed: 1.50, cost: 0.25},
+    {tier: 4, speed: 2.00, cost: 0.50},
+    {tier: 5, speed: 3.00, cost: 0.50},
   ],
   blacksmithBench: [
-    {tier: 1, speedMultiplier: 1.50, costMulitplier: 1.00},
-    {tier: 2, speedMultiplier: 2.00, costMulitplier: 0.75},
-    {tier: 3, speedMultiplier: 2.50, costMulitplier: 0.75},
-    {tier: 4, speedMultiplier: 3.00, costMulitplier: 0.50},
-    {tier: 5, speedMultiplier: 3.00, costMulitplier: 0.50},
+    {tier: 1, speed: 0.50, cost: 0.00},
+    {tier: 2, speed: 1.00, cost: 0.25},
+    {tier: 3, speed: 1.50, cost: 0.25},
+    {tier: 4, speed: 2.00, cost: 0.50},
+    {tier: 5, speed: 2.00, cost: 0.50},
   ],
   armorersBench: [
-    {tier: 1, speedMultiplier: 1.50, costMulitplier: 1.00},
-    {tier: 2, speedMultiplier: 2.00, costMulitplier: 0.75},
-    {tier: 3, speedMultiplier: 2.50, costMulitplier: 0.75},
-    {tier: 4, speedMultiplier: 3.00, costMulitplier: 0.50},
-    {tier: 5, speedMultiplier: 4.00, costMulitplier: 0.50},
+    {tier: 1, speed: 0.50, cost: 0.00},
+    {tier: 2, speed: 1.00, cost: 0.25},
+    {tier: 3, speed: 1.50, cost: 0.25},
+    {tier: 4, speed: 2.00, cost: 0.50},
+    {tier: 5, speed: 3.00, cost: 0.50},
   ],
   carpentersBench: [
-    {tier: 1, speedMultiplier: 1.50, costMulitplier: 1.00},
-    {tier: 2, speedMultiplier: 2.00, costMulitplier: 0.75},
-    {tier: 3, speedMultiplier: 2.50, costMulitplier: 0.75},
-    {tier: 4, speedMultiplier: 3.00, costMulitplier: 0.50},
-    {tier: 5, speedMultiplier: 3.00, costMulitplier: 0.50},
+    {tier: 1, speed: 0.50, cost: 0.00},
+    {tier: 2, speed: 1.00, cost: 0.25},
+    {tier: 3, speed: 1.50, cost: 0.25},
+    {tier: 4, speed: 2.00, cost: 0.50},
+    {tier: 5, speed: 2.00, cost: 0.50},
   ],
   stove: [
-    {tier: 1, speedMultiplier: 1.50, costMulitplier: 1.00},
-    {tier: 2, speedMultiplier: 2.00, costMulitplier: 1.00},
-    {tier: 3, speedMultiplier: 2.50, costMulitplier: 1.00},
-    {tier: 4, speedMultiplier: 3.00, costMulitplier: 1.00},
-    {tier: 5, speedMultiplier: 3.00, costMulitplier: 1.00},
+    {tier: 1, speed: 0.50, cost: 0.00},
+    {tier: 2, speed: 1.00, cost: 0.00},
+    {tier: 3, speed: 1.50, cost: 0.00},
+    {tier: 4, speed: 2.00, cost: 0.00},
+    {tier: 5, speed: 2.00, cost: 0.00},
   ],
   tannery: [
-    {tier: 1, speedMultiplier: 1.50, costMulitplier: 1.00},
-    {tier: 2, speedMultiplier: 2.00, costMulitplier: 1.00},
-    {tier: 3, speedMultiplier: 2.50, costMulitplier: 1.00},
-    {tier: 4, speedMultiplier: 3.00, costMulitplier: 1.00},
-    {tier: 5, speedMultiplier: 4.00, costMulitplier: 1.00},
+    {tier: 1, speed: 0.50, cost: 0.00},
+    {tier: 2, speed: 1.00, cost: 0.00},
+    {tier: 3, speed: 1.50, cost: 0.00},
+    {tier: 4, speed: 2.00, cost: 0.00},
+    {tier: 5, speed: 3.00, cost: 0.00},
   ],
   furnace: [
-    {tier: 1, speedMultiplier: 1.50, costMulitplier: 1.00},
-    {tier: 2, speedMultiplier: 2.00, costMulitplier: 1.00},
-    {tier: 3, speedMultiplier: 2.50, costMulitplier: 1.00},
-    {tier: 4, speedMultiplier: 3.00, costMulitplier: 1.00},
-    {tier: 5, speedMultiplier: 4.00, costMulitplier: 1.00},
+    {tier: 1, speed: 0.50, cost: 0.00},
+    {tier: 2, speed: 1.00, cost: 0.00},
+    {tier: 3, speed: 1.50, cost: 0.00},
+    {tier: 4, speed: 2.00, cost: 0.00},
+    {tier: 5, speed: 3.00, cost: 0.00},
   ],
 }
+
+type ThrallTiers = {[craftStation in CraftStation]?: number}
 
 interface ItemGoal {
   item: Item
@@ -500,30 +501,36 @@ const findThrall = ({craftStation, tier}: {
 }): Thrall | undefined =>
   (thrallMap[craftStation] || []).find(thrall => thrall.tier === tier)
 
-const findItemsRequired = (items: ItemGoal[]): ItemRequirement[] => {
+const findItemsRequired = (
+  items: ItemGoal[],
+  thrallTiers: ThrallTiers,
+): ItemRequirement[] => {
   return items
     .map(({item, count}) => {
       // TODO: Use a better selection strategy for recipes.
       const recipe = item.recipes[0]
       const {craftStation, craftTime} = recipe
 
-      const thrall = findThrall({craftStation, tier: 4})
+      const tier = thrallTiers[craftStation] || 0
+      const thrall = findThrall({craftStation, tier})
 
       const requirement: ItemRequirement = {
         item,
         count,
         craftStation: craftStation,
-        craftTime: craftTime,
+        craftTime: thrall
+          ? Math.ceil(craftTime - craftTime / (thrall.speed + 1))
+          : craftTime,
         requires: findItemsRequired(
           recipe.requires.map(ingredient => ({
             item: itemMap[ingredient.itemId],
-            // TODO: Double-check this, and make this configurable.
             count: count * (
               thrall
-                ? Math.ceil(ingredient.count * thrall.costMulitplier)
+                ? Math.ceil(ingredient.count - ingredient.count * thrall.cost)
                 : ingredient.count
             ),
           })),
+          thrallTiers,
         ),
       }
 
@@ -535,10 +542,11 @@ const getDuration = ({craftTime, count}: {
   craftTime: number
   count: number
 }): string => {
-  const seconds = craftTime % 60
-  const minutes = Math.floor((craftTime / 60) % 60)
-  const hours = Math.floor((craftTime / 60 / 60) % 24)
-  const days = Math.floor(craftTime / 60 / 60 / 24)
+  const totalCraftTime = craftTime * count
+  const seconds = totalCraftTime % 60
+  const minutes = Math.floor((totalCraftTime / 60) % 60)
+  const hours = Math.floor((totalCraftTime / 60 / 60) % 24)
+  const days = Math.floor(totalCraftTime / 60 / 60 / 24)
 
   const parts = []
 
@@ -571,7 +579,6 @@ interface ItemRequirementTotal {
 const printTree = (
   requirementList: ItemRequirement[],
   level = 0,
-  tier = 4,
   totalsData: {[key: string]: ItemRequirementTotal} = {},
 ): void => {
   requirementList.forEach((requirement, index) => {
@@ -600,7 +607,7 @@ const printTree = (
 
     totalsData[item.id].count += count
 
-    printTree(requirement.requires, level + 1, tier, totalsData)
+    printTree(requirement.requires, level + 1, totalsData)
   })
 
   if (level === 0) {
@@ -670,7 +677,16 @@ const parseGoals = (): ItemGoal[] => {
 
 const main = (): void => {
   const goals = parseGoals()
-  const tree = findItemsRequired(goals)
+  const thrallTiers: ThrallTiers = {
+    cauldron: 4,
+    blacksmithBench: 4,
+    armorersBench: 4,
+    carpentersBench: 4,
+    stove: 4,
+    tannery: 4,
+    furnace: 4,
+  }
+  const tree = findItemsRequired(goals, thrallTiers)
 
   printTree(tree)
 }
