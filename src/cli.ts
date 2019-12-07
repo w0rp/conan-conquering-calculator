@@ -7,6 +7,7 @@ type CraftStation = 'gather'
   | 'tannery'
   | 'blacksmithBench'
   | 'carpentersBench'
+  | 'trebuchet'
   | 'artisansWorktable'
   | 'armorersBench'
   | 'stove'
@@ -31,6 +32,42 @@ interface Item {
 }
 
 const itemList: Item[] = [
+  // Food
+  {
+    id: 'unappetizingFish',
+    name: 'Unappetizing Fish',
+    recipes: [
+      {
+        craftStation: 'gather',
+        craftTime: 1,
+        requires: [],
+      },
+    ],
+  },
+  // Animal Parts
+  {
+    id: 'volatileGland',
+    name: 'Volatile Gland',
+    recipes: [
+      {
+        craftStation: 'gather',
+        craftTime: 60,
+        requires: [],
+      },
+    ],
+  },
+  // Plants
+  {
+    id: 'plantFiber',
+    name: 'Plant Fiber',
+    recipes: [
+      {
+        craftStation: 'gather',
+        craftTime: 1,
+        requires: [],
+      },
+    ],
+  },
   // Mining
   {
     id: 'stone',
@@ -93,7 +130,7 @@ const itemList: Item[] = [
     recipes: [
       {
         craftStation: 'gather',
-        craftTime: 1,
+        craftTime: 0.5,
         requires: [],
       },
     ],
@@ -150,6 +187,19 @@ const itemList: Item[] = [
     ],
   },
   {
+    id: 'shapedWood',
+    name: 'Shaped Wood',
+    recipes: [
+      {
+        craftStation: 'carpentersBench',
+        craftTime: 10,
+        requires: [
+          {itemId: 'wood', count: 10},
+        ],
+      },
+    ],
+  },
+  {
     id: 'insulatedWood',
     name: 'Insulated Wood',
     recipes: [
@@ -165,6 +215,45 @@ const itemList: Item[] = [
   },
   // Other Materials
   {
+    id: 'ichor',
+    name: 'Ichor',
+    recipes: [
+      {
+        craftStation: 'stove',
+        craftTime: 5,
+        requires: [
+          {itemId: 'unappetizingFish', count: 3},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'twine',
+    name: 'Twine',
+    recipes: [
+      {
+        craftStation: 'armorersBench',
+        craftTime: 3,
+        requires: [
+          {itemId: 'plantFiber', count: 3},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'brick',
+    name: 'Brick',
+    recipes: [
+      {
+        craftStation: 'furnace',
+        craftTime: 10,
+        requires: [
+          {itemId: 'stone', count: 10},
+        ],
+      },
+    ],
+  },
+  {
     id: 'tar',
     name: 'Tar',
     recipes: [
@@ -173,6 +262,19 @@ const itemList: Item[] = [
         craftTime: 10,
         requires: [
           {itemId: 'hide', count: 3},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'glass',
+    name: 'Glass',
+    recipes: [
+      {
+        craftStation: 'furnace',
+        craftTime: 10,
+        requires: [
+          {itemId: 'crystal', count: 2},
         ],
       },
     ],
@@ -206,6 +308,19 @@ const itemList: Item[] = [
     ],
   },
   {
+    id: 'ironReinforcement',
+    name: 'Iron Reinforcement',
+    recipes: [
+      {
+        craftStation: 'blacksmithBench',
+        craftTime: 30,
+        requires: [
+          {itemId: 'ironBar', count: 2},
+        ],
+      },
+    ],
+  },
+  {
     id: 'steelBar',
     name: 'Steel Bar',
     recipes: [
@@ -224,11 +339,10 @@ const itemList: Item[] = [
     name: 'Steel Reinforcement',
     recipes: [
       {
-        craftStation: 'furnace',
-        craftTime: 15,
+        craftStation: 'blacksmithBench',
+        craftTime: 60,
         requires: [
-          {itemId: 'ironBar', count: 5},
-          {itemId: 'steelFire', count: 1},
+          {itemId: 'steelBar', count: 2},
         ],
       },
     ],
@@ -357,6 +471,107 @@ const itemList: Item[] = [
   },
   // Siege
   {
+    id: 'siegeFoundation',
+    name: 'Siege Foundation',
+    recipes: [
+      {
+        craftStation: 'carpentersBench',
+        craftTime: 30,
+        requires: [
+          {itemId: 'shapedWood', count: 30},
+          {itemId: 'brick', count: 25},
+          {itemId: 'ironReinforcement', count: 15},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'trebuchetBase',
+    name: 'Trebuchet Base',
+    recipes: [
+      {
+        craftStation: 'carpentersBench',
+        craftTime: 30,
+        requires: [
+          {itemId: 'wood', count: 500},
+          {itemId: 'stone', count: 150},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'trebuchetFrame',
+    name: 'Trebuchet Frame',
+    recipes: [
+      {
+        craftStation: 'trebuchet',
+        craftTime: 30,
+        requires: [
+          {itemId: 'wood', count: 500},
+          {itemId: 'stone', count: 150},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'trebuchetArm',
+    name: 'Trebuchet Arm',
+    recipes: [
+      {
+        craftStation: 'trebuchet',
+        craftTime: 30,
+        requires: [
+          {itemId: 'wood', count: 300},
+          {itemId: 'ironReinforcement', count: 13},
+          {itemId: 'twine', count: 20},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'trebuchet',
+    name: 'Trebuchet',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 30,
+        requires: [
+          {itemId: 'siegeFoundation', count: 1},
+          {itemId: 'trebuchetBase', count: 1},
+          {itemId: 'trebuchetFrame', count: 1},
+          {itemId: 'trebuchetArm', count: 1},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'siegeBoulder',
+    name: 'Siege Boulder',
+    recipes: [
+      {
+        craftStation: 'trebuchet',
+        craftTime: 10,
+        requires: [
+          {itemId: 'stone', count: 250},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'demonFireBarrage',
+    name: 'Demon-fire Barrage',
+    recipes: [
+      {
+        craftStation: 'trebuchet',
+        craftTime: 20,
+        requires: [
+          {itemId: 'explosiveJar', count: 2},
+          {itemId: 'twine', count: 10},
+        ],
+      },
+    ],
+  },
+  {
     id: 'dragonPowder',
     name: 'Dragonpowder',
     recipes: [
@@ -396,6 +611,60 @@ const itemList: Item[] = [
           {itemId: 'earthenwareJug', count: 1},
           {itemId: 'tar', count: 5},
           {itemId: 'dragonPowder', count: 1},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'glassFlask',
+    name: 'Glass Flask',
+    recipes: [
+      {
+        craftStation: 'furnace',
+        craftTime: 10,
+        requires: [
+          {itemId: 'glass', count: 3},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'waterFilledGlassFlask',
+    name: 'Water-filled Glass Flask',
+    recipes: [
+      {
+        craftStation: 'cauldron',
+        craftTime: 2,
+        requires: [
+          {itemId: 'glassFlask', count: 1},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'waterOrb',
+    name: 'Water Orb',
+    recipes: [
+      {
+        craftStation: 'cauldron',
+        craftTime: 30,
+        requires: [
+          {itemId: 'waterFilledGlassFlask', count: 1},
+          {itemId: 'ichor', count: 1},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'demonFireOrb',
+    name: 'Demon-fire Orb',
+    recipes: [
+      {
+        craftStation: 'cauldron',
+        craftTime: 60,
+        requires: [
+          {itemId: 'waterOrb', count: 1},
+          {itemId: 'volatileGland', count: 5},
         ],
       },
     ],
@@ -519,14 +788,14 @@ const findItemsRequired = (
         count,
         craftStation: craftStation,
         craftTime: thrall
-          ? Math.ceil(craftTime - craftTime / (thrall.speed + 1))
+          ? Math.max(Math.floor(craftTime - craftTime / (thrall.speed + 1)), 1)
           : craftTime,
         requires: findItemsRequired(
           recipe.requires.map(ingredient => ({
             item: itemMap[ingredient.itemId],
             count: count * (
               thrall
-                ? Math.ceil(ingredient.count - ingredient.count * thrall.cost)
+                ? Math.max(Math.floor(ingredient.count - ingredient.count * thrall.cost), 1)
                 : ingredient.count
             ),
           })),
