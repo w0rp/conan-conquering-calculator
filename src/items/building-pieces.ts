@@ -409,6 +409,36 @@ export const buildingPieceList: Item[] = [
       },
     ],
   },
+  {
+    id: 'blackIceReinforcedWoodenGate',
+    name: 'Black Ice-Reinforced Wooden Gate',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'insulatedWood', count: 4},
+          {itemId: 'steelReinforcement', count: 3},
+          {itemId: 'blackIce', count: 15},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'blackIceReinforcedWoodenGateway',
+    name: 'Black Ice-Reinforced Wooden Gateway',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'insulatedWood', count: 4},
+          {itemId: 'steelReinforcement', count: 3},
+          {itemId: 'blackIce', count: 15},
+        ],
+      },
+    ],
+  },
   // Reinforced
   {
     id: 'heavyReinforcedDoorA',
@@ -737,7 +767,7 @@ export const buildingPieceList: Item[] = [
     ],
   },
   {
-    id: 'ReinforcedStoneFence',
+    id: 'reinforcedStoneFence',
     name: 'Reinforced Stone Fence',
     recipes: [
       {
@@ -752,7 +782,7 @@ export const buildingPieceList: Item[] = [
     ],
   },
   {
-    id: 'ReinforcedStoneFenceFoundation',
+    id: 'reinforcedStoneFenceFoundation',
     name: 'Reinforced Stone Fence Foundation',
     recipes: [
       {
@@ -767,7 +797,7 @@ export const buildingPieceList: Item[] = [
     ],
   },
   {
-    id: 'ReinforcedStoneStairsRail',
+    id: 'reinforcedStoneStairsRail',
     name: 'Reinforced Stone Stairs (rail)',
     recipes: [
       {
@@ -782,7 +812,7 @@ export const buildingPieceList: Item[] = [
     ],
   },
   {
-    id: 'ReinforcedStoneStairsCorner',
+    id: 'reinforcedStoneStairsCorner',
     name: 'Reinforced Stone Stairs Corner',
     recipes: [
       {
@@ -797,7 +827,7 @@ export const buildingPieceList: Item[] = [
     ],
   },
   {
-    id: 'ReinforcedStoneStairs',
+    id: 'reinforcedStoneStairs',
     name: 'Reinforced Stone Stairs',
     recipes: [
       {
@@ -812,7 +842,7 @@ export const buildingPieceList: Item[] = [
     ],
   },
   {
-    id: 'ReinforcedStoneRamp',
+    id: 'reinforcedStoneRamp',
     name: 'Reinforced Stone Ramp',
     recipes: [
       {
@@ -827,7 +857,7 @@ export const buildingPieceList: Item[] = [
     ],
   },
   {
-    id: 'ReinforcedStoneRampCorner',
+    id: 'reinforcedStoneRampCorner',
     name: 'Reinforced Stone Ramp Corner',
     recipes: [
       {
@@ -842,7 +872,7 @@ export const buildingPieceList: Item[] = [
     ],
   },
   {
-    id: 'ReinforcedStoneHatchFrame',
+    id: 'reinforcedStoneHatchFrame',
     name: 'Reinforced Stone Hatch Frame',
     recipes: [
       {
@@ -857,7 +887,7 @@ export const buildingPieceList: Item[] = [
     ],
   },
   {
-    id: 'ReinforcedHatchDoorA',
+    id: 'reinforcedHatchDoorA',
     name: 'Reinforced Hatch Door (Variant A)',
     recipes: [
       {
@@ -871,7 +901,7 @@ export const buildingPieceList: Item[] = [
     ],
   },
   {
-    id: 'ReinforcedHatchDoorB',
+    id: 'reinforcedHatchDoorB',
     name: 'Reinforced Hatch Door (Variant B)',
     recipes: [
       {
@@ -881,6 +911,52 @@ export const buildingPieceList: Item[] = [
           {itemId: 'shapedWood', count: 4},
           {itemId: 'steelReinforcement', count: 3},
           {itemId: 'twine', count: 5},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'reinforcedStoneGateway',
+    name: 'Reinforced Stone Gateway',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 30},
+          {itemId: 'shapedWood', count: 8},
+          {itemId: 'steelReinforcement', count: 6},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'reinforcedStoneGate',
+    name: 'Reinforced Stone Gate',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 15},
+          {itemId: 'shapedWood', count: 4},
+          {itemId: 'steelReinforcement', count: 3},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'drawbridge',
+    name: 'Drawbridge',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 30},
+          {itemId: 'shapedWood', count: 20},
+          {itemId: 'steelReinforcement', count: 6},
+          {itemId: 'twine', count: 10},
         ],
       },
     ],
