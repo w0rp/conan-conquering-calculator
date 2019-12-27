@@ -107,7 +107,7 @@ const getDuration = ({craftTime, count}: {
  */
 export const parseGoals = (words: string[]): ItemGoal[] => {
   const searchTerms: [number, string][] = []
-  let count = 0
+  let count = 1
   let wordBuffer: string[] = []
 
   words.forEach(word => {
