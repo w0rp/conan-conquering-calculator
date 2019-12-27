@@ -71,6 +71,34 @@ export const mineralList: Item[] = [
     ],
   },
   {
+    id: 'stoneConsolidant',
+    name: 'Stone Consolidant',
+    recipes: [
+      {
+        craftStation: 'cauldron',
+        craftTime: 10,
+        requires: [
+          {itemId: 'ichor', count: 2},
+          {itemId: 'twine', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'hardenedBrick',
+    name: 'Hardended Brick',
+    recipes: [
+      {
+        craftStation: 'furnace',
+        craftTime: 15,
+        requires: [
+          {itemId: 'brick', count: 1},
+          {itemId: 'stoneConsolidant', count: 1},
+        ],
+      },
+    ],
+  },
+  {
     id: 'glass',
     name: 'Glass',
     recipes: [

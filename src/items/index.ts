@@ -20,6 +20,10 @@ export const itemList = ([] as Item[]).concat(
 export const itemMap: {[key: string]: Item} = {}
 
 itemList.forEach(item => {
+  if (itemMap[item.id] != null) {
+    throw new Error("Duplicate item ID: " + item.id)
+  }
+
   // Put each item in a map.
   itemMap[item.id] = item
 

@@ -18,6 +18,36 @@ export const buildingPieceList: Item[] = [
     ],
   },
   {
+    id: 'blackIceReinforcedWoodenDoor',
+    name: 'Black Ice-Reinforced Wooden Door',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'insulatedWood', count: 4},
+          {itemId: 'steelReinforcement', count: 3},
+          {itemId: 'blackIce', count: 15},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'blackIceReinforcedWoodenDoorframe',
+    name: 'Black Ice-Reinforced Wooden Doorframe',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'insulatedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+          {itemId: 'blackIce', count: 8},
+        ],
+      },
+    ],
+  },
+  {
     id: 'blackIceReinforcedWoodenFoundation',
     name: 'Black Ice-Reinforced Wooden Foundation',
     recipes: [
@@ -33,9 +63,8 @@ export const buildingPieceList: Item[] = [
     ],
   },
   {
-    id: 'blackIceReinforcedWoodenWall',
-    name: 'Black Ice-Reinforced Wooden Wall',
-    aliases: ['black ice wall'],
+    id: 'blackIceReinforcedWoodenPillar',
+    name: 'Black Ice-Reinforced Wooden Pillar',
     recipes: [
       {
         craftStation: 'byHand',
@@ -49,16 +78,16 @@ export const buildingPieceList: Item[] = [
     ],
   },
   {
-    id: 'blackIceReinforcedWoodenWedgeFoundation',
-    name: 'Black Ice-Reinforced Wooden Wedge Foundation',
+    id: 'tiledSlopedBlackIceReinforcedWoodenRoof',
+    name: 'Tiled Sloped Black Ice-Reinforced Wooden Roof',
     recipes: [
       {
         craftStation: 'byHand',
         craftTime: 5,
         requires: [
-          {itemId: 'insulatedWood', count: 4},
-          {itemId: 'steelReinforcement', count: 3},
-          {itemId: 'blackIce', count: 14},
+          {itemId: 'insulatedWood', count: 3},
+          {itemId: 'steelReinforcement', count: 2},
+          {itemId: 'blackIce', count: 9},
         ],
       },
     ],
@@ -94,8 +123,39 @@ export const buildingPieceList: Item[] = [
     ],
   },
   {
-    id: 'blackIceReinforcedWoodenDoorframe',
-    name: 'Black Ice-Reinforced Wooden Doorframe',
+    id: 'invertedTiledWedgeBlackIceReinforcedWoodenSlopedRoof',
+    name: 'Inverted Tiled Wedge Black Ice-Reinforced Wooden Sloped Roof',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'insulatedWood', count: 3},
+          {itemId: 'steelReinforcement', count: 2},
+          {itemId: 'blackIce', count: 9},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'tiledWedgeBlackIceReinforcedWoodenSlopedRoof',
+    name: 'Tiled Wedge Black Ice-Reinforced Wooden Sloped Roof',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'insulatedWood', count: 3},
+          {itemId: 'steelReinforcement', count: 2},
+          {itemId: 'blackIce', count: 9},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'blackIceReinforcedWoodenWall',
+    name: 'Black Ice-Reinforced Wooden Wall',
+    aliases: ['black ice wall'],
     recipes: [
       {
         craftStation: 'byHand',
@@ -109,8 +169,8 @@ export const buildingPieceList: Item[] = [
     ],
   },
   {
-    id: 'blackIceReinforcedWoodenPillar',
-    name: 'Black Ice-Reinforced Wooden Pillar',
+    id: 'leftSlopingBlackIceReinforcedWoodenWall',
+    name: 'Left-sloping Black Ice-Reinforced Wooden Wall',
     recipes: [
       {
         craftStation: 'byHand',
@@ -123,202 +183,419 @@ export const buildingPieceList: Item[] = [
       },
     ],
   },
-  // Siege
   {
-    id: 'siegeFoundation',
-    name: 'Siege Foundation',
-    recipes: [
-      {
-        craftStation: 'carpentersBench',
-        craftTime: 30,
-        requires: [
-          {itemId: 'shapedWood', count: 30},
-          {itemId: 'brick', count: 25},
-          {itemId: 'ironReinforcement', count: 15},
-        ],
-      },
-    ],
-  },
-  {
-    id: 'trebuchetBase',
-    name: 'Trebuchet Base',
-    recipes: [
-      {
-        craftStation: 'carpentersBench',
-        craftTime: 30,
-        requires: [
-          {itemId: 'wood', count: 500},
-          {itemId: 'stone', count: 150},
-        ],
-      },
-    ],
-  },
-  {
-    id: 'trebuchetFrame',
-    name: 'Trebuchet Frame',
-    recipes: [
-      {
-        craftStation: 'trebuchet',
-        craftTime: 30,
-        requires: [
-          {itemId: 'wood', count: 500},
-          {itemId: 'stone', count: 150},
-        ],
-      },
-    ],
-  },
-  {
-    id: 'trebuchetArm',
-    name: 'Trebuchet Arm',
-    recipes: [
-      {
-        craftStation: 'trebuchet',
-        craftTime: 30,
-        requires: [
-          {itemId: 'wood', count: 300},
-          {itemId: 'ironReinforcement', count: 13},
-          {itemId: 'twine', count: 20},
-        ],
-      },
-    ],
-  },
-  {
-    id: 'trebuchet',
-    name: 'Trebuchet',
+    id: 'rightSlopingBlackIceReinforcedWoodenWall',
+    name: 'Right-sloping Black Ice-Reinforced Wooden Wall',
     recipes: [
       {
         craftStation: 'byHand',
-        craftTime: 30,
-        requires: [
-          {itemId: 'siegeFoundation', count: 1},
-          {itemId: 'trebuchetBase', count: 1},
-          {itemId: 'trebuchetFrame', count: 1},
-          {itemId: 'trebuchetArm', count: 1},
-        ],
-      },
-    ],
-  },
-  {
-    id: 'siegeBoulder',
-    name: 'Siege Boulder',
-    recipes: [
-      {
-        craftStation: 'trebuchet',
-        craftTime: 10,
-        requires: [
-          {itemId: 'stone', count: 250},
-        ],
-      },
-    ],
-  },
-  {
-    id: 'demonFireBarrage',
-    name: 'Demon-fire Barrage',
-    recipes: [
-      {
-        craftStation: 'trebuchet',
-        craftTime: 20,
-        requires: [
-          {itemId: 'explosiveJar', count: 2},
-          {itemId: 'twine', count: 10},
-        ],
-      },
-    ],
-  },
-  {
-    id: 'dragonPowder',
-    name: 'Dragonpowder',
-    recipes: [
-      {
-        craftStation: 'cauldron',
-        craftTime: 60,
-        requires: [
-          {itemId: 'demonBlood', count: 2},
-          {itemId: 'brimstone', count: 10},
-          {itemId: 'crystal', count: 50},
-          {itemId: 'steelFire', count: 100},
-        ],
-      },
-    ],
-  },
-  {
-    id: 'earthenwareJug',
-    name: 'Earthenware Jug',
-    recipes: [
-      {
-        craftStation: 'artisansWorktable',
         craftTime: 5,
         requires: [
-          {itemId: 'stone', count: 50},
+          {itemId: 'insulatedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+          {itemId: 'blackIce', count: 8},
         ],
       },
     ],
   },
   {
-    id: 'explosiveJar',
-    name: 'Explosive Jar',
+    id: 'blackIceReinforcedWoodenFrame',
+    name: 'Black Ice-Reinforced Wooden Frame',
     recipes: [
       {
         craftStation: 'byHand',
-        craftTime: 10,
+        craftTime: 5,
         requires: [
-          {itemId: 'earthenwareJug', count: 1},
-          {itemId: 'tar', count: 5},
-          {itemId: 'dragonPowder', count: 1},
+          {itemId: 'insulatedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+          {itemId: 'blackIce', count: 8},
         ],
       },
     ],
   },
   {
-    id: 'glassFlask',
-    name: 'Glass Flask',
+    id: 'blackIceReinforcedSlopedRoofCorner',
+    name: 'Black Ice-Reinforced Sloped Roof Corner',
     recipes: [
       {
-        craftStation: 'furnace',
-        craftTime: 10,
+        craftStation: 'byHand',
+        craftTime: 5,
         requires: [
-          {itemId: 'glass', count: 3},
+          {itemId: 'insulatedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+          {itemId: 'blackIce', count: 8},
         ],
       },
     ],
   },
   {
-    id: 'waterFilledGlassFlask',
-    name: 'Water-filled Glass Flask',
+    id: 'invertedBlackIceReinforcedSlopedRoofCorner',
+    name: 'Interted Black Ice-Reinforced Sloped Roof Corner',
     recipes: [
       {
-        craftStation: 'cauldron',
-        craftTime: 2,
+        craftStation: 'byHand',
+        craftTime: 5,
         requires: [
-          {itemId: 'glassFlask', count: 1},
+          {itemId: 'insulatedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+          {itemId: 'blackIce', count: 8},
         ],
       },
     ],
   },
   {
-    id: 'waterOrb',
-    name: 'Water Orb',
+    id: 'leftSlopingInvertedBlackIceReinforcedWoodenWall',
+    name: 'Left-sloping Inverted Black Ice-Reinforced Wooden Wall',
     recipes: [
       {
-        craftStation: 'cauldron',
-        craftTime: 30,
+        craftStation: 'byHand',
+        craftTime: 5,
         requires: [
-          {itemId: 'waterFilledGlassFlask', count: 1},
-          {itemId: 'ichor', count: 1},
+          {itemId: 'insulatedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+          {itemId: 'blackIce', count: 8},
         ],
       },
     ],
   },
   {
-    id: 'demonFireOrb',
-    name: 'Demon-fire Orb',
+    id: 'rightSlopingInvertedBlackIceReinforcedWoodenWall',
+    name: 'Right-sloping Inverted Black Ice-Reinforced Wooden Wall',
     recipes: [
       {
-        craftStation: 'cauldron',
-        craftTime: 60,
+        craftStation: 'byHand',
+        craftTime: 5,
         requires: [
-          {itemId: 'waterOrb', count: 1},
-          {itemId: 'volatileGland', count: 5},
+          {itemId: 'insulatedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+          {itemId: 'blackIce', count: 8},
+        ],
+      },
+    ],
+  },
+  // Reinforced
+  {
+    id: 'heavyReinforcedDoorA',
+    name: 'Heavy Reinforced Door (Variant A)',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'shapedWood', count: 4},
+          {itemId: 'steelReinforcement', count: 3},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'heavyReinforcedDoorB',
+    name: 'Heavy Reinforced Door (Variant B)',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'steelReinforcement', count: 6},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'heavyReinforcedDoorC',
+    name: 'Heavy Reinforced Door (Variant C)',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'shapedWood', count: 4},
+          {itemId: 'steelReinforcement', count: 3},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'reinforcedStoneFoundation',
+    name: 'Reinforced Stone Foundation',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 15},
+          {itemId: 'shapedWood', count: 4},
+          {itemId: 'steelReinforcement', count: 3},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'reinforcedStoneCeiling',
+    name: 'Reinforced Stone Ceiling',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 9},
+          {itemId: 'shapedWood', count: 3},
+          {itemId: 'steelReinforcement', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'reinforcedStoneWall',
+    name: 'Reinforced Stone Wall',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 8},
+          {itemId: 'shapedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'reinforcedStoneFrame',
+    name: 'Reinforced Stone Frame',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 8},
+          {itemId: 'shapedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'reinforcedStoneDoorframe',
+    name: 'Reinforced Stone Doorframe',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 8},
+          {itemId: 'shapedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'reinforcedStonePillar',
+    name: 'Reinforced Stone Pillar',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 8},
+          {itemId: 'shapedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'reinforcedStoneWedge',
+    name: 'Reinforced Stone Wedge',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 8},
+          {itemId: 'shapedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'reinforcedStoneWedgeFoundation',
+    name: 'Reinforced Stone Wedge Foundation',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 8},
+          {itemId: 'shapedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'invertedTiledWedgeSlopedRoof',
+    name: 'Inverted Tiled Wedge Sloped Roof',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 8},
+          {itemId: 'shapedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'tiledWedgeSlopedRoof',
+    name: 'Tiled Wedge Sloped Roof',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 9},
+          {itemId: 'shapedWood', count: 3},
+          {itemId: 'steelReinforcement', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'tiledSlopedRoof',
+    name: 'Tiled Sloped Roof',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 14},
+          {itemId: 'shapedWood', count: 4},
+          {itemId: 'steelReinforcement', count: 3},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'leftSlopingReinforcedStoneWall',
+    name: 'Left Sloping Reinforced Stone Wall',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 9},
+          {itemId: 'shapedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'rightSlopingReinforcedStoneWall',
+    name: 'Right Sloping Reinforced Stone Wall',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 9},
+          {itemId: 'shapedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'reinforcedWoodenRooftopCap',
+    name: 'Reinforced Wooden Rooftop Cap',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 8},
+          {itemId: 'shapedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 3},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'reinforcedWoodenRooftopIntersection',
+    name: 'Reinforced Wooden Rooftop Intersection',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 8},
+          {itemId: 'shapedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'reinforcedWoodenSlopedRoofCorner',
+    name: 'Reinforced Wooden Sloped Roof Corner',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 8},
+          {itemId: 'shapedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'invertedReinforcedWoodenSlopedRoofCorner',
+    name: 'Inverted Reinforced Wooden Sloped Roof Corner',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 8},
+          {itemId: 'shapedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'leftSlopingInvertedReinforcedStoneWall',
+    name: 'Left-sloping Inverted Reinforced Stone Wall',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 9},
+          {itemId: 'shapedWood', count: 3},
+          {itemId: 'steelReinforcement', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'rightSlopingInvertedReinforcedStoneWall',
+    name: 'Right-sloping Inverted Reinforced Stone Wall',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 9},
+          {itemId: 'shapedWood', count: 3},
+          {itemId: 'steelReinforcement', count: 2},
         ],
       },
     ],
