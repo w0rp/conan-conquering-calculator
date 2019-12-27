@@ -58,7 +58,7 @@ const main = (): void => {
   const searchOutput = document.getElementById('searchOutput') as HTMLOutputElement
   const form = document.getElementsByTagName('form')[0] as HTMLFormElement
 
-  let searchTimer: NodeJS.Timeout | undefined
+  let searchTimer: number | undefined
 
   if (searchBox == null) {
     throw new Error("Search box not found!")
@@ -92,7 +92,7 @@ const main = (): void => {
       clearTimeout(searchTimer)
     }
 
-    searchTimer = setTimeout(updateResults, 100)
+    searchTimer = setTimeout(updateResults, 100) as any as number
   }
 
   searchBox.addEventListener('keyup', (event) => {
