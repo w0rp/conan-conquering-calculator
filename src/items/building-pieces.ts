@@ -381,6 +381,7 @@ export const buildingPieceList: Item[] = [
   {
     id: 'blackIceReinforcedHatchFrame',
     name: 'Black Ice-Reinforced Hatch Frame',
+    aliases: ['black ice hatch frame'],
     recipes: [
       {
         craftStation: 'byHand',
@@ -396,6 +397,7 @@ export const buildingPieceList: Item[] = [
   {
     id: 'blackIceReinforcedHatchDoor',
     name: 'Black Ice-Reinforced Hatch Door',
+    aliases: ['black ice hatch'],
     recipes: [
       {
         craftStation: 'byHand',
@@ -412,6 +414,7 @@ export const buildingPieceList: Item[] = [
   {
     id: 'blackIceReinforcedWoodenGate',
     name: 'Black Ice-Reinforced Wooden Gate',
+    aliases: ['black ice gate'],
     recipes: [
       {
         craftStation: 'byHand',
@@ -427,6 +430,7 @@ export const buildingPieceList: Item[] = [
   {
     id: 'blackIceReinforcedWoodenGateway',
     name: 'Black Ice-Reinforced Wooden Gateway',
+    aliases: ['black ice gateway'],
     recipes: [
       {
         craftStation: 'byHand',
