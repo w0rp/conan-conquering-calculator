@@ -11,16 +11,8 @@ import {
 const displayResults = (
   goals: ItemGoal[],
   searchOutput: HTMLOutputElement,
+  thrallTiers: ThrallTiers,
 ): void => {
-  const thrallTiers: ThrallTiers = {
-    cauldron: 4,
-    blacksmithBench: 4,
-    armorersBench: 4,
-    carpentersBench: 4,
-    stove: 4,
-    tannery: 4,
-    furnace: 4,
-  }
   const tree = findItemsRequired(goals, thrallTiers)
 
   const {descriptions, totalDescriptions} = flattenRequirements(tree)
@@ -54,9 +46,18 @@ const displayResults = (
   searchOutput.textContent = text
 }
 
+const findSelectedThrallLevel = (inputName: string) => {
+  const radios = Array.from(document.getElementsByName(inputName)) as HTMLInputElement[]
+  const checkedRadio = radios.find(x => x.checked)
+
+  return Number(checkedRadio?.value) || 0
+}
+
 const main = (): void => {
   const searchBox = document.getElementById('searchBox') as HTMLInputElement
   const searchOutput = document.getElementById('searchOutput') as HTMLOutputElement
+  const form = document.getElementsByTagName('form')[0] as HTMLFormElement
+
   let searchTimer: NodeJS.Timeout | undefined
 
   if (searchBox == null) {
@@ -67,16 +68,43 @@ const main = (): void => {
     throw new Error("Search output not found!")
   }
 
-  searchBox.addEventListener('keyup', (event) => {
+  if (form == null) {
+    throw new Error("Form not found!")
+  }
+
+  const updateResults = () => {
+    const goals = parseGoals(searchBox.value.trim().split(/ +/g))
+    const thrallTiers: ThrallTiers = {
+      cauldron: findSelectedThrallLevel('cauldronThrall'),
+      blacksmithBench: findSelectedThrallLevel('blacksmithThrall'),
+      armorersBench: findSelectedThrallLevel('armorerThrall'),
+      carpentersBench: findSelectedThrallLevel('carpenterThrall'),
+      stove: findSelectedThrallLevel('stoveThrall'),
+      tannery: findSelectedThrallLevel('tannerThrall'),
+      furnace: findSelectedThrallLevel('furnaceThrall'),
+    }
+
+    displayResults(goals, searchOutput, thrallTiers)
+  }
+
+  const updateResultsWithDebounce = () => {
     if (searchTimer) {
       clearTimeout(searchTimer)
     }
 
+    searchTimer = setTimeout(updateResults, 100)
+  }
 
-    searchTimer = setTimeout(() => {
-      const goals = parseGoals(searchBox.value.trim().split(/ +/g))
-      displayResults(goals, searchOutput)
-    }, 100)
+  searchBox.addEventListener('keyup', (event) => {
+    updateResultsWithDebounce()
+  })
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault()
+  })
+
+  form.addEventListener('change', (event) => {
+    updateResults()
   })
 }
 
