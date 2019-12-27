@@ -273,6 +273,142 @@ export const buildingPieceList: Item[] = [
       },
     ],
   },
+  {
+    id: 'blackIceReinforcedWoodenFence',
+    name: 'Black Ice-Reinforced Wooden Fence',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'insulatedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+          {itemId: 'blackIce', count: 8},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'blackIceReinforcedWoodenFenceFoundation',
+    name: 'Black Ice-Reinforced Wooden Fence Foundation',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'insulatedWood', count: 3},
+          {itemId: 'steelReinforcement', count: 3},
+          {itemId: 'blackIce', count: 12},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'blackIceReinforcedWoodenStairsRail',
+    name: 'Black Ice-Reinforced Wooden Stairs (rail)',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'insulatedWood', count: 4},
+          {itemId: 'steelReinforcement', count: 3},
+          {itemId: 'blackIce', count: 15},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'blackIceReinforcedWoodenStairs',
+    name: 'Black Ice-Reinforced Wooden Stairs',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'insulatedWood', count: 4},
+          {itemId: 'steelReinforcement', count: 3},
+          {itemId: 'blackIce', count: 15},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'blackIceReinforcedWoodenStairsCorner',
+    name: 'Black Ice-Reinforced Wooden Stairs Corner',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'insulatedWood', count: 4},
+          {itemId: 'steelReinforcement', count: 3},
+          {itemId: 'blackIce', count: 15},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'blackIceReinforcedRamp',
+    name: 'Black Ice-Reinforced Ramp',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'insulatedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+          {itemId: 'blackIce', count: 8},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'blackIceReinforcedRampCorner',
+    name: 'Black Ice-Reinforced Ramp Corner',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'insulatedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+          {itemId: 'blackIce', count: 8},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'blackIceReinforcedHatchFrame',
+    name: 'Black Ice-Reinforced Hatch Frame',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'insulatedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 1},
+          {itemId: 'blackIce', count: 5},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'blackIceReinforcedHatchDoor',
+    name: 'Black Ice-Reinforced Hatch Door',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'insulatedWood', count: 4},
+          {itemId: 'steelReinforcement', count: 3},
+          {itemId: 'blackIce', count: 8},
+          {itemId: 'twine', count: 5},
+        ],
+      },
+    ],
+  },
   // Reinforced
   {
     id: 'heavyReinforcedDoorA',
@@ -596,6 +732,155 @@ export const buildingPieceList: Item[] = [
           {itemId: 'hardenedBrick', count: 9},
           {itemId: 'shapedWood', count: 3},
           {itemId: 'steelReinforcement', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'ReinforcedStoneFence',
+    name: 'Reinforced Stone Fence',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 8},
+          {itemId: 'shapedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'ReinforcedStoneFenceFoundation',
+    name: 'Reinforced Stone Fence Foundation',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 12},
+          {itemId: 'shapedWood', count: 3},
+          {itemId: 'steelReinforcement', count: 3},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'ReinforcedStoneStairsRail',
+    name: 'Reinforced Stone Stairs (rail)',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 15},
+          {itemId: 'shapedWood', count: 4},
+          {itemId: 'steelReinforcement', count: 3},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'ReinforcedStoneStairsCorner',
+    name: 'Reinforced Stone Stairs Corner',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 15},
+          {itemId: 'shapedWood', count: 4},
+          {itemId: 'steelReinforcement', count: 3},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'ReinforcedStoneStairs',
+    name: 'Reinforced Stone Stairs',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 15},
+          {itemId: 'shapedWood', count: 4},
+          {itemId: 'steelReinforcement', count: 3},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'ReinforcedStoneRamp',
+    name: 'Reinforced Stone Ramp',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 8},
+          {itemId: 'shapedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'ReinforcedStoneRampCorner',
+    name: 'Reinforced Stone Ramp Corner',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 8},
+          {itemId: 'shapedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'ReinforcedStoneHatchFrame',
+    name: 'Reinforced Stone Hatch Frame',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'hardenedBrick', count: 5},
+          {itemId: 'shapedWood', count: 2},
+          {itemId: 'steelReinforcement', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'ReinforcedHatchDoorA',
+    name: 'Reinforced Hatch Door (Variant A)',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'steelReinforcement', count: 6},
+          {itemId: 'twine', count: 5},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'ReinforcedHatchDoorB',
+    name: 'Reinforced Hatch Door (Variant B)',
+    recipes: [
+      {
+        craftStation: 'byHand',
+        craftTime: 5,
+        requires: [
+          {itemId: 'shapedWood', count: 4},
+          {itemId: 'steelReinforcement', count: 3},
+          {itemId: 'twine', count: 5},
         ],
       },
     ],
