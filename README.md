@@ -42,8 +42,18 @@ For setting up the calculator, you'll need to do the following.
 These instructions are provided for running the calculator for Windows users who
 aren't developers and just want an easy way to try it offline on their machine.
 
-1. Download and install Yarn from here: https://yarnpkg.com/latest.msi
-2. Download a ZIP of this project from here: https://github.com/w0rp/conan-conquering-calculator/archive/master.zip
-3. Extract the ZIP anywhere you want.
-4. Navigate to the directory you extracted the ZIP to and run the installation
-   instructions listed above.
+1. Download and install an LTS 64-bit version of NodeJS from here:
+   https://nodejs.org/en/download/
+2. When the NodeJS installer runs, you do not have to tick "automatically
+   install the necessary tools," you can untick that.
+3. Download and install Yarn from here: https://yarnpkg.com/latest.msi
+4. Download a ZIP of this project from here: https://github.com/w0rp/conan-conquering-calculator/archive/master.zip
+5. Extract the ZIP anywhere you want.
+6. Navigate to the directory in a shell. An easy way is to hold shift and right
+   click while inside the directory where you extract the ZIP, and click "Open
+   PowerShell here." If you do not have PowerShell, use CMD, which you can
+   figure out how to use.
+7. Once in the shell in the right directory, run the commands explained above.
+
+Hopefully this experience will show people who aren't developers how easy it is
+to get started with building a web project.
