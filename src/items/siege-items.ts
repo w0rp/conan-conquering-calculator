@@ -37,7 +37,7 @@ export const siegeItemList: Item[] = [
     recipes: [
       {
         craftStation: 'trebuchet',
-        craftTime: 30,
+        craftTime: 30 * 60,
         requires: [
           {itemId: 'wood', count: 500},
           {itemId: 'stone', count: 150},
@@ -51,7 +51,7 @@ export const siegeItemList: Item[] = [
     recipes: [
       {
         craftStation: 'trebuchet',
-        craftTime: 30,
+        craftTime: 30 * 60,
         requires: [
           {itemId: 'wood', count: 300},
           {itemId: 'ironReinforcement', count: 13},
