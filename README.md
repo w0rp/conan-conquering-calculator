@@ -20,6 +20,7 @@ searches you can try which should yield decent results:
 * `300 explosive`
 * `2 trebuchet` (Uses new 30 minute build times for frames and arms)
 * `400 black ice wedge foundation`
+* `800 black ice wall 400 black ice ceiling 400 black ice foundation`
 
 Gather times are not currently based on any real tests of how long it takes to
 gather something, and some suggested recipes may be suboptimal, but any crafting
