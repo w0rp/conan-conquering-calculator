@@ -9,7 +9,6 @@ export const mineralList: Item[] = [
       {
         craftStation: 'gather',
         craftTime: 1,
-        requires: [],
       },
     ],
   },
@@ -20,7 +19,6 @@ export const mineralList: Item[] = [
       {
         craftStation: 'gather',
         craftTime: 1,
-        requires: [],
       },
     ],
   },
@@ -31,7 +29,6 @@ export const mineralList: Item[] = [
       {
         craftStation: 'gather',
         craftTime: 1,
-        requires: [],
       },
     ],
   },
@@ -42,7 +39,6 @@ export const mineralList: Item[] = [
       {
         craftStation: 'gather',
         craftTime: 1,
-        requires: [],
       },
     ],
   },
@@ -53,7 +49,6 @@ export const mineralList: Item[] = [
       {
         craftStation: 'gather',
         craftTime: 1,
-        requires: [],
       },
     ],
   },
@@ -175,6 +170,134 @@ export const mineralList: Item[] = [
         craftTime: 60,
         requires: [
           {itemId: 'steelBar', count: 2},
+        ],
+      },
+    ],
+  },
+  // Precious metals
+  {
+    id: 'silverStone',
+    name: 'Silver Stone',
+    recipes: [
+      {
+        craftStation: 'gather',
+        craftTime: 1,
+      },
+    ],
+  },
+  {
+    id: 'silverBar',
+    name: 'Silver Bar',
+    recipes: [
+      {
+        craftStation: 'furnace',
+        craftTime: 10,
+        requires: [
+          {itemId: 'silverStone', count: 3},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'silverCoin',
+    name: 'Silver Coin',
+    recipes: [
+      {
+        craftStation: 'furnace',
+        craftTime: 10,
+        requires: [
+          {itemId: 'silverBar', count: 1 / 30},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'silverDust',
+    name: 'Silver Dust',
+    recipes: [
+      {
+        craftStation: 'grinder',
+        craftTime: 10,
+        requires: [
+          {itemId: 'silverBar', count: 0.1},
+        ],
+      },
+      {
+        craftStation: 'grinder',
+        craftTime: 10,
+        requires: [
+          {itemId: 'silverCoin', count: 0.5},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'goldStone',
+    name: 'Gold Stone',
+    recipes: [
+      {
+        craftStation: 'gather',
+        craftTime: 1,
+      },
+    ],
+  },
+  {
+    id: 'goldBar',
+    name: 'Gold Bar',
+    recipes: [
+      {
+        craftStation: 'furnace',
+        craftTime: 10,
+        requires: [
+          {itemId: 'goldStone', count: 3},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'goldCoin',
+    name: 'Gold Coin',
+    recipes: [
+      {
+        craftStation: 'furnace',
+        craftTime: 10,
+        requires: [
+          {itemId: 'goldBar', count: 1 / 30},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'goldDust',
+    name: 'Gold Dust',
+    recipes: [
+      {
+        craftStation: 'grinder',
+        craftTime: 10,
+        requires: [
+          {itemId: 'goldBar', count: 0.1},
+        ],
+      },
+      {
+        craftStation: 'grinder',
+        craftTime: 10,
+        requires: [
+          {itemId: 'goldCoin', count: 0.5},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'alchemicalBase',
+    name: 'Alchemical Base',
+    recipes: [
+      {
+        craftStation: 'cauldron',
+        craftTime: 20,
+        requires: [
+          {itemId: 'silverDust', count: 2},
+          {itemId: 'goldDust', count: 1},
+          {itemId: 'ichor', count: 2},
         ],
       },
     ],

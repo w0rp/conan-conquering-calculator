@@ -49,7 +49,7 @@ export const findItemsRequired = (
           ? floorCost(craftTime - craftTime / (thrall.speed + 1))
           : craftTime,
         requires: findItemsRequired(
-          recipe.requires.map(ing => ({
+          (recipe.requires || []).map(ing => ({
             item: itemMap[ing.itemId],
             count: count * (
               thrall

@@ -8,7 +8,6 @@ export const woodItemList: Item[] = [
       {
         craftStation: 'gather',
         craftTime: 0.5,
-        requires: [],
       },
     ],
   },

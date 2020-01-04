@@ -8,7 +8,6 @@ export const hideItemList: Item[] = [
       {
         craftStation: 'gather',
         craftTime: 1,
-        requires: [],
       },
     ],
   },

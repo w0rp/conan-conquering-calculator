@@ -10,6 +10,7 @@ export type CraftStation = 'gather'
   | 'armorersBench'
   | 'stove'
   | 'dryer'
+  | 'grinder'
 
 export interface Ingredient {
   itemId: string
@@ -19,7 +20,7 @@ export interface Ingredient {
 export interface Recipe {
   craftStation: CraftStation
   craftTime: number
-  requires: Ingredient[]
+  requires?: Ingredient[]
 }
 
 export interface Item {

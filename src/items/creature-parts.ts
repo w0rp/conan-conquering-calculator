@@ -9,7 +9,6 @@ export const creaturePartList: Item[] = [
       {
         craftStation: 'gather',
         craftTime: 1,
-        requires: [],
       },
     ],
   },
@@ -20,7 +19,6 @@ export const creaturePartList: Item[] = [
       {
         craftStation: 'gather',
         craftTime: 60,
-        requires: [],
       },
     ],
   },
@@ -31,7 +29,6 @@ export const creaturePartList: Item[] = [
       {
         craftStation: 'gather',
         craftTime: 1,
-        requires: [],
       },
     ],
   },

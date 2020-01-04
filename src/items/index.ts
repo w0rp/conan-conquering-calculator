@@ -21,7 +21,7 @@ export const itemMap: {[key: string]: Item} = {}
 
 itemList.forEach(item => {
   if (itemMap[item.id] != null) {
-    throw new Error("Duplicate item ID: " + item.id)
+    throw new Error('Duplicate item ID: ' + item.id)
   }
 
   // Put each item in a map.
@@ -32,10 +32,13 @@ itemList.forEach(item => {
   Object.freeze(item.recipes)
   Object.values(item.recipes).forEach(recipe => {
     Object.freeze(recipe)
-    Object.freeze(recipe.requires)
-    Object.values(recipe.requires).forEach(req => {
-      Object.freeze(req)
-    })
+
+    if (recipe.requires) {
+      Object.freeze(recipe.requires)
+      Object.values(recipe.requires).forEach(req => {
+        Object.freeze(req)
+      })
+    }
   })
 })
 
@@ -45,10 +48,12 @@ Object.freeze(itemMap)
 // Complain if any items are missing.
 itemList.forEach(item => {
   item.recipes.forEach(recipe => {
-    recipe.requires.forEach(req => {
-      if (itemMap[req.itemId] == null) {
-        throw new Error('Required ID missing: ' + req.itemId + '\n')
-      }
-    })
+    if (recipe.requires) {
+      recipe.requires.forEach(req => {
+        if (itemMap[req.itemId] == null) {
+          throw new Error('Required ID missing: ' + req.itemId + '\n')
+        }
+      })
+    }
   })
 })

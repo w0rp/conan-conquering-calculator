@@ -8,7 +8,6 @@ export const plantPartList: Item[] = [
       {
         craftStation: 'gather',
         craftTime: 1,
-        requires: [],
       },
     ],
   },
