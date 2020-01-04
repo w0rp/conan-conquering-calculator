@@ -162,6 +162,20 @@ export const mineralList: Item[] = [
     ],
   },
   {
+    id: 'hardenedSteelBar',
+    name: 'Hardened Steel Bar',
+    recipes: [
+      {
+        craftStation: 'furnace',
+        craftTime: 15,
+        requires: [
+          {itemId: 'steelBar', count: 1},
+          {itemId: 'blackIce', count: 1},
+        ],
+      },
+    ],
+  },
+  {
     id: 'steelReinforcement',
     name: 'Steel Reinforcement',
     recipes: [
@@ -170,6 +184,65 @@ export const mineralList: Item[] = [
         craftTime: 60,
         requires: [
           {itemId: 'steelBar', count: 2},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'starMetalOre',
+    name: 'Star Metal Ore',
+    recipes: [
+      {
+        craftStation: 'gather',
+        craftTime: 1,
+      },
+    ],
+  },
+  {
+    id: 'starMetalBar',
+    name: 'Star Metal Bar',
+    recipes: [
+      {
+        craftStation: 'furnace',
+        craftTime: 20,
+        requires: [
+          {itemId: 'starMetalOre', count: 2},
+          {itemId: 'brimstone', count: 1},
+          {itemId: 'blackIce', count: 1},
+        ],
+      },
+    ],
+  },
+  {
+    id: 'obsidian',
+    name: 'Obsidian',
+    recipes: [
+      {
+        craftStation: 'gather',
+        craftTime: 1,
+      },
+    ],
+  },
+  {
+    id: 'rawAsh',
+    name: 'Raw Ash',
+    recipes: [
+      {
+        craftStation: 'gather',
+        craftTime: 1,
+      },
+    ],
+  },
+  {
+    id: 'compositeObsidian',
+    name: 'Composite Obsidian',
+    recipes: [
+      {
+        craftStation: 'volcanicForge',
+        craftTime: 10,
+        requires: [
+          {itemId: 'obsidian', count: 10},
+          {itemId: 'steelBar', count: 1},
         ],
       },
     ],

@@ -11,10 +11,18 @@ export type CraftStation = 'gather'
   | 'stove'
   | 'dryer'
   | 'grinder'
+  | 'fluidPress'
+  | 'volcanicForge'
 
 export interface Ingredient {
   itemId: string
   count: number
+  /**
+   * An optional number indicating the number of items yield given the
+   * `count` of the ingredients, say for when 2 rhino hides strip into 3
+   * thick hides.
+   */
+  for?: number
 }
 
 export interface Recipe {

@@ -45,4 +45,17 @@ export const creaturePartList: Item[] = [
       },
     ],
   },
+  {
+    id: 'oil',
+    name: 'Oil',
+    recipes: [
+      {
+        craftStation: 'fluidPress',
+        craftTime: 20,
+        requires: [
+          {itemId: 'unappetizingFish', count: 1},
+        ],
+      },
+    ],
+  },
 ]
