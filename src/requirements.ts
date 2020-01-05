@@ -51,11 +51,11 @@ export const findItemsRequired = (
         requires: findItemsRequired(
           (recipe.requires || []).map(ing => ({
             item: itemMap[ing.itemId],
-            count: Math.ceil((count / (ing.for ?? 1))) * (
+            count: Math.ceil(Math.ceil((count / (ing.for ?? 1))) * (
               thrall
                 ? floorCost(ing.count - ing.count * thrall.cost)
                 : ing.count
-            ),
+            )),
           })),
           thrallTiers,
         ),
