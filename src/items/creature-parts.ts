@@ -58,4 +58,14 @@ export const creaturePartList: Item[] = [
       },
     ],
   },
+  {
+    id: 'horn',
+    name: 'Horn (Variant A)',
+    recipes: [
+      {
+        craftStation: 'gather',
+        craftTime: 1,
+      },
+    ],
+  },
 ]

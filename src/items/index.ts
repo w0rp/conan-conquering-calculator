@@ -1,5 +1,6 @@
 import {Item} from '../recipe-type'
 
+import {armorItemList} from './armor'
 import {buildingPieceList} from './building-pieces'
 import {creaturePartList} from './creature-parts'
 import {hideItemList} from './hide'
@@ -16,6 +17,7 @@ export const itemList = ([] as Item[]).concat(
   mineralList,
   buildingPieceList,
   siegeItemList,
+  armorItemList,
 )
 export const itemMap: {[key: string]: Item} = {}
 
